@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/item")
+@RequestMapping("/api/item")
 @Slf4j
 public class ItemController {
 
@@ -17,7 +17,7 @@ public class ItemController {
     private ItemService itemService;
 
 
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity create(@RequestBody ItemRequest request){
 
         return ResponseEntity.of(itemService.create(request));

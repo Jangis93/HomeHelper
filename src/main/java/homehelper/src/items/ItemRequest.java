@@ -1,9 +1,18 @@
 package homehelper.src.items;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
-final class ItemRequest {
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+public class ItemRequest {
 
     @NotBlank
     @Min(3)
